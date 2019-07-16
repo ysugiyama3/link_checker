@@ -1,6 +1,6 @@
 # link_checker
 Python script to find erroneous links in bib record
-This link checker was inspired by [elink_checker] (https://github.com/pulcams/elink_checker) by Princeton University Library's Cataloging Archival and Metadata Services (CAMS).
+This link checker was inspired by <a href="https://github.com/pulcams/elink_checker">elink_checker</a> by Princeton University Library's Cataloging Archival and Metadata Services (CAMS).
 
 # What you need
 1. Python (3)
