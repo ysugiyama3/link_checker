@@ -26,11 +26,8 @@ def split(filehandler):
 #===============================================================================
 
 # List of reporting departments
+# For example, unit_list = ['ART', 'DIV']
 unit_list = ['''ENTER_LIST_OF_DEPTS''']
-'''
-For example
-unit_list = ['ART', 'DIV']
-'''
 
 # Query
 query = {'''ENTER_SQL'''}
@@ -100,7 +97,7 @@ query = {
 #===============================================================================
 
 # Make connection to the oracle database
-dsn = cx_Oracle.makedsn('''ENTER_HOST,ENTER_PORT,ENTER_DATABASE NAME''') # taken from tnsnames.ora
+dsn = cx_Oracle.makedsn('''ENTER_HOST,ENTER_PORT,ENTER_DATABASE NAME''') # from tnsnames.ora
 con = cx_Oracle.connect(user='''ENTER_USERNAME''',password='''ENTER_PASSWORD''',dsn=dsn)
 cur = con.cursor()
 

@@ -38,7 +38,7 @@ def check_url(u):
   
 def send_email(attach_file, body, recipients, subject):
 # Send email with file attachment. 
-    sender = """'xyz@xxx.edu'"""
+    sender = '''ENTER_EMAIL_ADDRESSES'''
     msg = MIMEMultipart()
     msg['from'] = sender
     msg['To'] = ','.join(recipients)
@@ -66,29 +66,22 @@ def send_email(attach_file, body, recipients, subject):
 #===============================================================================
 
 # list of reporting departments
+#For example, unit_list = ['ART', 'DIV']
 unit_list = ['''ENTER_LIST_OF_DEPTS''']
-'''
-For example
-unit_list = ['ART', 'DIV']
-'''
 
 # recipients' email addresses of each department
+# For example, recipients = dict(ART=['abc@xxx.edu'], DIV=['abc@xxx.edu','def@xxx.edu'])
 recipients = dict('''ENTER_EMAIL_ADDRESSES''')
-'''
-For example
-recipients = dict(ART=['abc@xxx.edu'], DIV=['abc@xxx.edu','def@xxx.edu'])
-'''
 
 #===============================================================================
 # main
 #===============================================================================
 
 # Create and connect database
+# For example, conn = sqlite3.connect('xxx.sqlite')
 conn = sqlite3.connect('''ENTER_DATABASE''')
-'''
-For example
-conn = sqlite3.connect('xxx.sqlite')
-'''
+
+
 cur = conn.cursor()		
 
 # Create table								
