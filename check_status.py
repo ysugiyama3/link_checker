@@ -20,13 +20,13 @@ from email import encoders
 def check_url(u):
 # Check url u. Return HTTP response.   
     try:
-        r = requests.head(u, allow_redirects=True, timeout=50)
+        r = requests.head(u, allow_redirects=True, timeout=(15, 15))
         code = r.status_code  
     except (requests.HTTPError, requests.URLRequired, requests.exceptions.RequestException, requests.TooManyRedirects, requests.ConnectionError, requests.ConnectTimeout, requests.ReadTimeout, requests.exceptions.Timeout):
         code = 'Error'
     if not str(code).startswith('2'):
         try:
-            r = requests.get(u, allow_redirects=True, timeout=50)
+            r = requests.get(u, allow_redirects=True, timeout=(15, 15))
             code = r.status_code           
         except (requests.ConnectTimeout, requests.ReadTimeout, requests.exceptions.Timeout):
             code = 'Timeout Error'              
