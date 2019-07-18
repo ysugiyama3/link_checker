@@ -9,7 +9,7 @@ This link checker was inspired by <a href="https://github.com/pulcams/elink_chec
 3. sqlite3 (for check_status.py)
 
 ## generate_input_file.py
-This script generates an input csv file that contains bib record ids, URL hosts, URLs, and holding location code per library department or collection. If it contains more than 10,000 rows, it is split by 10,000 rows. 
+This script generates an input csv file that contains bib record ids, URL hosts, URLs, and holding location code per library department or collection from Voyager Oracle database. If it contains more than 10,000 rows, it is split by 10,000 rows. 
 
 Make sure to replace “ENTER_XXX” with your own value in the script.
 
